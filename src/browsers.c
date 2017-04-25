@@ -72,43 +72,43 @@ static const char *browsers[][2] = {
   {"Coast", "Opera"},
 
   /* Others */
-  {"Homebrew", "Others"},
-  {"APT-HTTP", "Others"},
-  {"Apt-Cacher", "Others"},
-  {"Chef Client", "Others"},
-  {"Huawei", "Others"},
-  {"HUAWEI", "Others"},
-  {"BlackBerry", "Others"},
-  {"BrowserX", "Others"},
-  {"Dalvik", "Others"},
-  {"Dillo", "Others"},
-  {"ELinks", "Others"},
-  {"Epiphany", "Others"},
-  {"Firebird", "Others"},
-  {"Galeon", "Others"},
-  {"google-cloud-sdk", "Others"},
-  {"GranParadiso", "Others"},
-  {"IBrowse", "Others"},
-  {"K-Meleon", "Others"},
-  {"Kazehakase", "Others"},
-  {"Konqueror", "Others"},
-  {"Links", "Others"},
-  {"Lynx", "Others"},
-  {"Midori", "Others"},
-  {"Minefield", "Others"},
-  {"Mosaic", "Others"},
-  {"Netscape", "Others"},
-  {"SeaMonkey", "Others"},
-  {"UCBrowser", "Others"},
-  {"Wget", "Others"},
-  {"libfetch", "Others"},
-  {"check_http", "Others"},
-  {"Go-http-client", "Others"},
-  {"curl", "Others"},
-  {"midori", "Others"},
-  {"w3m", "Others"},
-  {"MicroMessenger", "Others"},
-  {"Apache", "Others"},
+  {"Homebrew", "Homebrew"},
+  {"APT-HTTP", "APT-HTTP"},
+  {"Apt-Cacher", "Apt-Cacher"},
+  {"Chef Client", "Chef Client"},
+  {"Huawei", "Huawei"},
+  {"HUAWEI", "HUAWEI"},
+  {"BlackBerry", "BlackBerry"},
+  {"BrowserX", "BrowserX"},
+  {"Dalvik", "Dalvik"},
+  {"Dillo", "Dillo"},
+  {"ELinks", "ELinks"},
+  {"Epiphany", "Epiphany"},
+  {"Firebird", "Firebird"},
+  {"Galeon", "Galeon"},
+  {"google-cloud-sdk", "google-cloud-sdk"},
+  {"GranParadiso", "GranParadiso"},
+  {"IBrowse", "IBrowse"},
+  {"K-Meleon", "K-Meleon"},
+  {"Kazehakase", "Kazehakase"},
+  {"Konqueror", "Konqueror"},
+  {"Links", "Links"},
+  {"Lynx", "Lynx"},
+  {"Midori", "Midori"},
+  {"Minefield", "Minefield"},
+  {"Mosaic", "Mosaic"},
+  {"Netscape", "Netscape"},
+  {"SeaMonkey", "SeaMonkey"},
+  {"UCBrowser", "UCBrowser"},
+  {"Wget", "Wget"},
+  {"libfetch", "libfetch"},
+  {"check_http", "check_http"},
+  {"Go-http-client", "Go-http-client"},
+  {"curl", "curl"},
+  {"midori", "midori"},
+  {"w3m", "w3m"},
+  {"MicroMessenger", "MicroMessenger"},
+  {"Apache", "Apache"},
 
   /* Feed-reader-as-a-service */
   {"AppleNewsBot", "Feeds"},
@@ -138,6 +138,8 @@ static const char *browsers[][2] = {
    * Firefox (Debian trademark policy) */
   {"Iceweasel", "Firefox"},
   {"Firefox", "Firefox"},
+  {"okhttp", "okhttp"},
+  {"Scale", "Scale"},
 
   /* Based on Chromium */
   {"Vivaldi", "Others"},
@@ -267,6 +269,7 @@ static const char *browsers[][2] = {
   {"XoviBot", "Crawlers"},
   {"X-CAD-SE", "Crawlers"},
   {"Safeassign", "Crawlers"},
+  {"PhantomJS", "Crawlers"},
 
   /* Podcast fetchers */
   {"Downcast", "Podcasts"},
@@ -301,6 +304,7 @@ static const char *browsers[][2] = {
   {"StatusCake", "Uptime"},
   {"internetVista", "Uptime"},
   {"Server Density Service Monitoring v2", "Uptime"},
+  
 
   {"Mozilla", "Others"}
 };
@@ -392,5 +396,5 @@ verify_browser (char *str, char *type)
   }
   xstrncpy (type, "Unknown", BROWSER_TYPE_LEN);
 
-  return alloc_string ("Unknown");
+  return alloc_string (str);
 }
